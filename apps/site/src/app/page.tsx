@@ -101,18 +101,10 @@ nextStep: "agent_pre_conversation"`;
 export default function LandingPage() {
   return (
     <main className="relative">
-      <section className="relative isolate overflow-hidden border-b border-border">
+      <section className="relative overflow-hidden border-b border-border">
         <div
           aria-hidden="true"
-          className="landing-theme-image landing-hero-media absolute inset-0 -z-20"
-        />
-        <div
-          aria-hidden="true"
-          className="landing-theme-overlay absolute inset-0 -z-10"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10"
+          className="pointer-events-none absolute inset-0 -z-10"
           style={{
             background:
               "linear-gradient(to bottom, transparent 0%, transparent 52%, color-mix(in srgb, var(--color-bg-canvas) 45%, transparent) 100%)",
@@ -239,16 +231,8 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="relative min-h-[24rem] overflow-hidden border border-border bg-surface">
-              <div
-                aria-hidden="true"
-                className="landing-theme-image absolute inset-0"
-              />
-              <div
-                aria-hidden="true"
-                className="landing-theme-overlay absolute inset-0"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent" />
+            <div className="relative min-h-[24rem] overflow-hidden border border-border bg-transparent">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 grid gap-3 p-5 sm:p-6">
                 <div className="flex items-center justify-between gap-4">
                   <span className="font-heading-compressed text-[0.7rem] uppercase tracking-[0.2em] text-primary">
@@ -309,7 +293,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="interfaces" className="border-b border-border">
+      <section id="interfaces" className="border-b border-border bg-canvas">
         <div className="section-shell py-12 lg:py-16">
           <div className="mb-6 space-y-4">
             <p className="eyebrow">Interfaces</p>
@@ -341,7 +325,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="border-b border-border">
+      <section className="border-b border-border bg-canvas">
         <div className="section-shell py-10">
           <div className="mb-6 flex items-center gap-3">
             <span className="dither h-3 w-3 text-secondary" />
@@ -365,7 +349,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="border-b border-border">
+      <section className="border-b border-border bg-canvas">
         <div className="section-shell grid gap-6 py-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-end lg:py-14">
           <p className="font-display text-[clamp(1.7rem,3vw,2.9rem)] leading-[1.2] text-primary">
             “In RE:FUDAN, you are not matched. You are seen again.”

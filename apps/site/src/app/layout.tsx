@@ -14,15 +14,15 @@ const themeScript = `
 `;
 
 const headerCellClass =
-  "flex min-h-[6rem] items-start px-4 py-2.5 sm:px-6 sm:py-3";
+  "flex min-h-[5.5rem] items-start px-2.5 py-1.5 sm:px-4 sm:py-2";
 const headerLinkClass =
-  "font-display text-[1.22rem] uppercase tracking-[0.14em] text-header-nav transition-colors hover:text-header-nav-hover";
+  "font-display text-[1.12rem] uppercase tracking-[0.1em] text-header-nav transition-colors hover:text-header-nav-hover";
 const headerLabelClass =
-  "font-display text-[1.08rem] uppercase tracking-[0.14em] text-header-nav";
+  "font-display text-[1rem] uppercase tracking-[0.1em] text-header-nav";
 const headerWordmarkChineseClass =
-  "block shrink-0 text-[clamp(2.12rem,3vw,2.58rem)] leading-[0.74] tracking-[-0.15em] text-header-wordmark";
+  "block shrink-0 text-[32px] leading-[32px] tracking-[-0.1em] text-header-wordmark";
 const headerWordmarkEnglishClass =
-  "block -mt-[0.03em] font-heading text-[clamp(1.98rem,2.82vw,2.42rem)] font-bold uppercase leading-[0.74] tracking-[-0.015em] text-header-wordmark";
+  "block font-heading text-[35.5px] font-bold uppercase leading-[35.5px] tracking-[0.02em] text-header-wordmark";
 const githubHref = "https://github.com/abraxas914/re_fdu";
 
 export const metadata: Metadata = {
@@ -43,6 +43,14 @@ export default function RootLayout({
           {themeScript}
         </Script>
         <div className="relative">
+          <div
+            aria-hidden="true"
+            className="landing-theme-image pointer-events-none fixed inset-0 -z-20"
+          />
+          <div
+            aria-hidden="true"
+            className="landing-theme-overlay pointer-events-none fixed inset-0 -z-10"
+          />
           <header
             className="sticky top-0 z-50 border-b border-header-border backdrop-blur-md"
             style={{ backgroundColor: "var(--header-bg-scrolled)" }}
@@ -50,12 +58,12 @@ export default function RootLayout({
             <div className="section-shell">
               <div className="grid border-l border-header-border md:grid-cols-[minmax(16rem,1.35fr)_repeat(5,minmax(0,1fr))] [&>*:last-child]:border-b-0 [&>*]:border-b [&>*]:border-header-border md:[&>*:last-child]:border-r-0 md:[&>*]:border-b-0 md:[&>*]:border-r">
                 <div className={headerCellClass}>
-                  <div className="flex h-full flex-col items-start justify-start gap-0 leading-none">
+                  <div className="flex h-full flex-col items-start justify-start gap-[0.06rem] pt-[0.02rem] leading-none">
                     <span
                       className={headerWordmarkChineseClass}
                       style={{
                         fontFamily: '"FZCuSong", serif',
-                        transform: "scaleX(0.86) scaleY(1.12)",
+                        transform: "scaleX(0.89) scaleY(1)",
                         transformOrigin: "left top",
                       }}
                     >
